@@ -1,0 +1,102 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+<div id="fh5co-page">
+	<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+	<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+		<h1 id="fh5co-logo"><a href="index.html"><img src="{% static 'images/logo.png'%}"
+					alt="Free HTML5 Bootstrap Website Template"></a></h1>
+		<div class="row">
+			<div class="row">
+				<form action="login" method="POST">
+					{% csrf_token %}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-2">
+								</div>
+								<div class="col-md-8">
+									<div class="form-group">
+										<input name="usuario" type="text" class="form-control" id="usuario"
+											placeholder="usuario">
+									</div>
+									<div class="form-group">
+										<input name="clave" type="password" class="form-control" id="clave"
+											placeholder="clave">
+									</div>
+									<div class="form-group">
+											<p><button type="submit" class="btn btn-primary">Ingresar</button></p>
+											<a style="font-size: 14px" href="{% url 'registeruser' %}">¿No tienes cuenta?</a>
+										</div>
+								</div>
+								<div class="col-md-2">
+								</div>
+							</div>
+						</div>
+				</form>
+			</div>
+	</aside>
+
+	<div id="fh5co-main">
+		<div class="fh5co-testimonial">
+
+		</div>
+		<div class="fh5co-narrow-content">
+			<h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">!BIENVENIDO! <span>a PRODULECT</span></h2>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+						<div class="fh5co-icon">
+							<i class="icon-strategy"></i>
+						</div>
+						<div class="fh5co-text">
+							<h3>Misión</h3>
+							<p>Contribuimos a la productividad lechera de nuestra región y a nivel nacional, ofreciendo un producto de excelente calidad para toda la población que los consumen, fundamentando su crecimiento en el desarrollo sostenible y sustentable con el medio ambiente.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+						<div class="fh5co-icon">
+							<i class="icon-telescope"></i>
+						</div>
+						<div class="fh5co-text">
+							<h3>Visión</h3>
+							<p>Ser una empresa ganadera con mejor posicionamiento y liderazgo en el territorio regional y nacional, manteniendo un producto de excelente calidad mejorando los procesos productivos que redundan en el bienestar de la empresa y la población.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="row">
+				<div class="col-md-6">
+					<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+						<div class="fh5co-icon">
+							<i class="icon-circle-compass"></i>
+						</div>
+						<div class="fh5co-text">
+							<h3>Ubicación</h3>
+							<p>La sede principal de la empresa se encuentra localizada en el municipio de Tibasosa en el km 10 vía Sogamoso-Duitama</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+						<div class="fh5co-icon">
+							<i class="icon-tools-2"></i>
+						</div>
+						<div class="fh5co-text">
+							<h3>Contactenos</h3>
+							<p>Cel. 3124552343</br>
+									Cel. 3106704510</br>
+									Tel. 7793753</p>
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+{% endblock content%}

@@ -1,0 +1,97 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block content %}
+<div id="fh5co-page">
+    <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
+    <aside id="fh5co-aside" role="complementary" class="js-fullheight">
+
+            <h1 id="fh5co-logo"><a href="index.html"><img src="{% static 'images/logo.png'%}"
+                alt="Free HTML5 Bootstrap Website Template"></a></h1>
+        <nav id="fh5co-main-menu" role="navigation">
+            <ul>
+                    {% if request.session.logged == True %}
+                    {% if request.session.cargo == 'administrador' %}
+                    <ul>
+                        <li class="fh5co-active"><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'createuser' %}">Administrar usuarios</a></li>
+                        <li><a href="{% url 'createbovine' %}">Administrar bovinos</a></li>
+                        <li><a href="{% url 'createproduction' %}">Administrar producción</a></li>
+                        <li><a href="{% url 'generarreporte'%}">Generar reportes</a></li>
+                        <li><a href="{% url 'salir'%}">Salir</a></li>
+                    </ul>
+                    {% endif %}
+                    {% else %}
+                        <meta http-equiv="REFRESH" content="0;url={{ 'home' }}">
+                    {% endif %}
+            </ul>
+        </nav>
+
+    </aside>
+
+    <div id="fh5co-main">
+        <div class="fh5co-narrow-content fh5co-border-bottom">
+            <h2 class="fh5co-heading animate-box" data-animate-effect="fadeInLeft">MÓDULO DE GENERACIÓN<span>DE
+                    REPORTES</span></h2>
+        </div>
+        <div class="fh5co-narrow-content fh5co-border-bottom" id="visualizar">
+            <div class="row">
+                <div class="col-md-20 animate-box" data-animate-effect="fadeInLeft">
+                    <h1 class="fh5co-heading-colored">REPORTES PRODUCCIÓN</h1>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-20 animate-box" data-animate-effect="fadeInLeft">
+                    <form action="generarreporteaction" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-13">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input name="fecha_inicial" type="date" class="form-control" id="fecha_inicial"
+                                                placeholder="Ingrese la primer fecha">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input name="fecha_final" type="date" class="form-control" id="fecha_final"
+                                                placeholder="Ingrese la segunda fecha">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p><button type="submit" class="btn btn-primary btn-outline">Generar reporte</button></p>
+                    </form>
+                </div>
+                <div class="row">
+                    <table class="table">
+                        <thead style="background-color: #196f3d">
+                            <tr>
+                                <th scope="col">Primera Produccion</th>
+                                <th scope="col">Segunda Produccion</th>
+                                <th scope="col">Cantidad Concentrado</th>
+                            </tr>
+                        </thead>
+                        {% for form in producciones %}
+                        <tbody>
+                            <tr>
+                                <td scope="row">{{ form.primera_produccion }}</td>
+                                <td scope="row">{{ form.segunda_produccion }}</td>
+                                <td scope="row">{{ form.cantidad_concentrado }}</td>
+                            </tr>											
+                        </tbody>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock content%}
