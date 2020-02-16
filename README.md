@@ -3,11 +3,11 @@ La aplicación fue desarrollada en el lenguaje de programación ***python*** y u
 
 El grupo ***SMARTSOFT***  :computer: está conformado por:
 
-:pushpin: Cristian Andres Arias Páez [GitHub :pencil2:](https://github.com/AriasPaez/)  
-:pushpin: Hernan Alirio Cadena Gonzalez
-:pushpin: Liseth Juliana Péres Mesa
-:pushpin: Lina María Ramírez Martínez
-:pushpin: Joham Sebastian Medina Corredor [GitHub Joham](https://github.com/JohamSMC/)
+* Cristian Andres Arias Páez [GitHub :pencil2:](https://github.com/AriasPaez/)  
+* Hernan Alirio Cadena Gonzalez
+* Liseth Juliana Péres Mesa
+* Lina María Ramírez Martínez
+* Joham Sebastian Medina Corredor [GitHub Joham](https://github.com/JohamSMC/)
 
 ## Pasos para instalar la aplicación Web :page_facing_up:
 
