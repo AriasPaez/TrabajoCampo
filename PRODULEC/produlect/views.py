@@ -114,10 +114,13 @@ def updatebovine(request, codigo_bovino):
 
 def updatebovineaction(request):
     if request.method == 'POST':
+        codigo_bovino = request.POST['codigo_bovino']
+        bovine = bovino.objects.get(codigo_bovino=codigo_bovino)
         form = BovinoForm(request.POST)
+        bovine.delete()
         if form.is_valid():
-            bovino = form.save(commit=False)
-            bovino.save()
+            bovinoU = form.save(commit=False)
+            bovinoU.save()
             form = BovinoForm
             args = {
                 'form': form,
