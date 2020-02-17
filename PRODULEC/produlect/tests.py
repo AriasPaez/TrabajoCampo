@@ -12,6 +12,8 @@ class TestViews(TestCase):
         self.render_create_production_url = reverse('createproduction')
         self.create_production_action_url = reverse('createproductionaction')
         self.update_production_action_url = reverse('updateproductionaction')
+        self.search_user = reverse('searchuser')
+        self.create_user_action = reverse('creatuseraction')
 
     # Testing para Buscar Produccion
     def test_search_production_GET(self):
@@ -45,6 +47,30 @@ class TestViews(TestCase):
                 # El link mostrado a continuación, corresponde al link al cual renderiza la función a la que se está realizando testing
         # dicha función está ubidaca en el archivo <views.py>
         self.assertTemplateUsed(response, 'production/create.html')
+
+        # Testing para Buscar Usuario
+    def test_search_user_GET(self):
+                # Toma como <response> el <name> tomado dentro del metódo <setUp>, el cual está ubicado en este mismo archivo (<tests.py>), 
+        # al inicio de la clase que este posee
+        # esto lo hace indicandole a <self.> el atributo correspondiente definido en el <setUP>
+        response = self.client.get(self.search_user)
+        self.assertEquals(response.status_code, 200)
+                # El link mostrado a continuación, corresponde al link al cual renderiza la función a la que se está realizando testing
+        # dicha función está ubidaca en el archivo <views.py>
+        self.assertTemplateUsed(response, 'user/search.html')
+
+#         # Testing para Crear Usuario
+#     def test_create_user_GET(self):
+#                 # Toma como <response> el <name> tomado dentro del metódo <setUp>, el cual está ubicado en este mismo archivo (<tests.py>), 
+#         # al inicio de la clase que este posee
+#         # esto lo hace indicandole a <self.> el atributo correspondiente definido en el <setUP>
+#         response = self.client.get(self.create_usern)
+#         self.assertEquals(response.status_code, 200)
+#                 # El link mostrado a continuación, corresponde al link al cual renderiza la función a la que se está realizando testing
+#         # dicha función está ubidaca en el archivo <views.py>
+#         self.assertTemplateUsed(response, 'user/create.html')
+
+
 #**************************************************************************************************************************************
 #--------------------------------------------------------------------------------------------------------------------------------------
         # EN DESARROLLO...!!!!!!!!!!!!!!!!!!!!!!!!!!!!! No quiere servir (¬_¬)
