@@ -9,7 +9,7 @@ El grupo ***SMARTSOFT***  :computer: está conformado por:
 * Lina María Ramírez Martínez
 * Joham Sebastian Medina Corredor [GitHub Joham](https://github.com/JohamSMC/)
 
-## Pasos para instalar la aplicación Web :page_facing_up:
+## :one: Pasos para instalar la aplicación Web :page_facing_up:
 
 * Primer paso:
 > Se sugiere crear un entorno virtual, para lo cual se debe tener instalado ***python*** y el gestor de paquetes ***PIP***
@@ -58,4 +58,12 @@ pip install -r requirements.txt
 ```
 python manage.py runserver
 ```
+
+## :two: Testing
+> Por consola, ubicado en la raíz del proyecto (donde está ubicado el archivo ***manage.py***, dentro de la carpeta PRODULEC):
+
+```
+python manage.py test produlect
+```
+
 
