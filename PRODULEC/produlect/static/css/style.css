@@ -221,7 +221,7 @@ figure {
 }
 
 #fh5co-main {
-  width: 85%;
+  width: 93%;
   float: right;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -229,17 +229,17 @@ figure {
 }
 @media screen and (max-width: 1200px) {
   #fh5co-main {
-    width: 70%;
+    width: 98%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   #fh5co-main {
     width: 100%;
   }
 }
 #fh5co-main .fh5co-narrow-content {
   position: relative;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   padding: 4em 0;
 }
@@ -359,7 +359,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 .fh5co-testimonial .item figure img {
   max-width: inherit;
-  width: 90px;
+  width: 100px;
   margin: 0 auto;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -493,17 +493,20 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   float: right;
   text-align: left;
   width: 70%;
+  text-align: justify;
 }
 @media screen and (max-width: 768px) {
   .fh5co-counter .fh5co-text {
     width: 100%;
-    text-align: center;
+   
+    text-align: justify;
   }
 }
 .fh5co-counter .fh5co-text h3 {
   margin: 0;
   padding: 0;
   position: relative;
+  text-align: justify;
 }
 .fh5co-counter .fh5co-text h3.border-bottom:after {
   content: "";
@@ -598,20 +601,24 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 .fh5co-feature .fh5co-text {
   float: right;
   width: 80%;
+  text-align: justify;
 }
 @media screen and (max-width: 768px) {
   .fh5co-feature .fh5co-text {
     width: 82%;
+    text-align: justify;
   }
 }
 @media screen and (max-width: 480px) {
   .fh5co-feature .fh5co-text {
     width: 72%;
+    text-align: justify;
   }
 }
 .fh5co-feature .fh5co-text h2, .fh5co-feature .fh5co-text h3 {
   margin: 0;
   padding: 0;
+  text-align: justify;
 }
 .fh5co-feature .fh5co-text h3 {
   font-weight: 300;
@@ -620,6 +627,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   font-size: 14px;
   letter-spacing: .2em;
   text-transform: uppercase;
+  text-align: justify;
 }
 
 .fh5co-heading {
