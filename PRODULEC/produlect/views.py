@@ -49,10 +49,13 @@ def updateuser(request, cedula):
 
 def updateuseraction(request):
     if request.method == 'POST':
+        cedula = request.POST['cedula']
+        user = empleado.objects.get(cedula=cedula)
         form = EmpleadoForm(request.POST)
+        user.delete()
         if form.is_valid():
-            empleado = form.save(commit=False)
-            empleado.save()
+            empleadoU = form.save(commit=False)
+            empleadoU.save()
             form = EmpleadoForm
             args = {
                 'form': form,
@@ -181,11 +184,29 @@ def updateproduction(request, id_produccion):
     return render(request, 'production/update.html', args)
 
 def updateproductionaction(request):
+    """
     if request.method == 'POST':
-        form = ProduccionForm(request.POST)
+        cedula = request.POST['cedula']
+        user = empleado.objects.get(cedula=cedula)
+        form = EmpleadoForm(request.POST)
+        user.delete()
         if form.is_valid():
-            produccion = form.save(commit=False)
-            produccion.save()
+            empleadoU = form.save(commit=False)
+            empleadoU.save()
+            form = EmpleadoForm
+            args = {
+                'form': form,
+                'success': True
+            }
+    """
+    if request.method == 'POST':
+        codigo_produccion = request.POST['codigo_produccion']
+        production = produccion.objects.get(codigo_produccion=codigo_produccion)
+        form = ProduccionForm(request.POST)
+        production.delete()
+        if form.is_valid():
+            produccionU = form.save(commit=False)
+            produccionU.save()
             form = ProduccionForm
             args = {
                 'form': form,

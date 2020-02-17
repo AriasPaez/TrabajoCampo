@@ -36,7 +36,7 @@ class cuenta(models.Model):
 
 class tipo_bovino(models.Model):
     id_tipo_bovino = models.AutoField(primary_key=True)
-    tipo_bovino = models.CharField(max_length=30)
+    tipo_bovino = models.CharField(max_length=45)
     descripcion = models.CharField(max_length=45)
 
 
@@ -51,11 +51,13 @@ class bovino(models.Model):
     fecha_ultimo_parto = models.DateField(
         'Fecha de Ultimo Parto', blank=False, null=False)
     dias_lactancia = models.CharField(max_length=45)
+    #id_tipo_bovino = models.ForeignKey(tipo_bovino, on_delete=models.CASCADE)
     id_tipo_bovino = models.ForeignKey(tipo_bovino, on_delete=models.CASCADE)
 
 
 class produccion(models.Model):
     id_produccion = models.AutoField(primary_key=True)
+    codigo_produccion = models.IntegerField(null=False)
     fecha_produccion = models.DateField(
         'Fecha de Produccion', blank=False, null=False)
     primera_produccion = models.DecimalField(

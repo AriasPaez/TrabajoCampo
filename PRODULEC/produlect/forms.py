@@ -44,6 +44,7 @@ class ProduccionForm(forms.ModelForm):
         
         widgets = {
             'id_produccion': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Id Produccion'}),
+            'codigo_produccion': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Codigo Produccion'}),
             'fecha_produccion': forms.DateInput(attrs={'class': 'form-control', 'placeholder': 'Fecha Produccion', 'type': 'date'}),
             'primera_produccion': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Primera Produccion (Lt)'}),
             'segunda_produccion': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Segunda Produccion (Lt)'}),

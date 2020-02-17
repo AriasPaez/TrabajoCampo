@@ -39,8 +39,8 @@
 							<div class="col-md-12">
 								<div class="row">
 									<div class="col-md-6">
-										<div class="form-group">
-											{{ form.id_produccion }}
+										<div id="codigo_produccion" class="form-group" style="visibility:hidden">
+											{{ form.codigo_produccion }}
 										</div>
 										<div class="form-group">
 											{{ form.fecha_produccion }}
@@ -54,11 +54,12 @@
 										<div class="form-group">
 											{{ form.cantidad_concentrado }}
 										</div>
+										
+									</div>
+									<div class="col-md-6">
 										<div class="form-group">
 											{{ form.id_empleado }}
 										</div>
-									</div>
-									<div class="col-md-6">
 										<div class="form-group">
 											{{ form.id_bovino }}
 										</div>
