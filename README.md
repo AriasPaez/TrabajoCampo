@@ -4,7 +4,7 @@ La aplicación fue desarrollada en el lenguaje de programación ***python*** y u
 El grupo ***SMARTSOFT***  :computer: está conformado por:
 
 * Cristian Andres Arias Páez [GitHub :pencil2:](https://github.com/AriasPaez/)  
-* Hernan Alirio Cadena Gonzalez [Github](https://github.com/hernanChain/) ![github-logo](https://user-images.githubusercontent.com/58449699/74889717-dd630f80-534f-11ea-855c-a117c0a2f547.png)![descarga (1)](https://user-images.githubusercontent.com/58449699/74971387-02a65b00-53ee-11ea-949e-318dd77a4f66.png)
+* ![descarga (1)](https://user-images.githubusercontent.com/58449699/74971387-02a65b00-53ee-11ea-949e-318dd77a4f66.png) Hernan Alirio Cadena Gonzalez [Github](https://github.com/hernanChain/) ![github-logo](https://user-images.githubusercontent.com/58449699/74889717-dd630f80-534f-11ea-855c-a117c0a2f547.png)
 * Liseth Juliana Péres Mesa
 * Lina María Ramírez Martínez
 * Joham Sebastian Medina Corredor [GitHub Joham](https://github.com/JohamSMC/)
