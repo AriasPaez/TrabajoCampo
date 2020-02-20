@@ -7,6 +7,9 @@ class cargo(models.Model):
     id_cargo = models.AutoField(primary_key=True)
     nombre_cargo = models.CharField(max_length=45)
     descripcion = models.CharField(max_length=45)
+    
+    def __str__(self):
+        return self.nombre_cargo
 
 
 class empleado(models.Model):
@@ -24,6 +27,9 @@ class empleado(models.Model):
     sueldo = models.IntegerField()
     email = models.CharField(max_length=45, blank=True)
     id_cargo = models.ForeignKey(cargo, on_delete=models.CASCADE)
+        
+    def __str__(self):
+        return self.primer_nombre
 
 
 class cuenta(models.Model):
@@ -37,7 +43,10 @@ class cuenta(models.Model):
 class tipo_bovino(models.Model):
     id_tipo_bovino = models.AutoField(primary_key=True)
     tipo_bovino = models.CharField(max_length=45)
-    descripcion = models.CharField(max_length=45)
+    descripcion = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.tipo_bovino
 
 
 class bovino(models.Model):
@@ -53,6 +62,9 @@ class bovino(models.Model):
     dias_lactancia = models.CharField(max_length=45)
     #id_tipo_bovino = models.ForeignKey(tipo_bovino, on_delete=models.CASCADE)
     id_tipo_bovino = models.ForeignKey(tipo_bovino, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.nombre
 
 
 class produccion(models.Model):

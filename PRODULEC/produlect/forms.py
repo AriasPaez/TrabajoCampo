@@ -18,6 +18,7 @@ class EmpleadoForm(forms.ModelForm):
             'sueldo': forms.NumberInput(attrs={'class': 'form-control', 'placeholder': 'Sueldo'}),
             'email': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email', 'type': 'email'}),
             'id_cargo': forms.Select(attrs={'class': 'form-control', 'placeholder': 'Cargo'}),
+            
         }
 
 class BovinoForm(forms.ModelForm):
