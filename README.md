@@ -11,25 +11,25 @@ El grupo ***SMARTSOFT***  :computer: está conformado por:
 
 ## :one: Pasos para instalar la aplicación Web :page_facing_up:
 
-* Primer paso:
+### Primer paso:
 > Se sugiere crear un entorno virtual, para lo cual se debe tener instalado ***python*** y el gestor de paquetes ***PIP***
 
-* Segundo paso:
+### Segundo paso:
 > Instalar **virtualenv**
 
 ```
 python -m pip install virtualenv
 ```
 
-* Tercer paso:
+### Tercer paso:
 > Despues procedemos a crear un entorno virutal
 
 ```
 python -m venv nombreEntornoVirtual
 ```
 
-* Cuarto paso:
-> Despues de crear el entorno virtual, inicializamos el entorno virtual, para esto nos ubicamos
+### Cuarto paso:
+> Despues de crear el entorno [virtual](#Tercer), inicializamos el entorno virtual, para esto nos ubicamos
 > en la ruta 
 
  ``../nombreEntornoVirtual/Scripts/``
@@ -40,7 +40,7 @@ python -m venv nombreEntornoVirtual
 activate
 ```
 
-* Quinto paso:
+### Quinto paso:
 > Nos ubicamos en la carpeta donde descargarmos el proyecto y verificamos que existe el archivo
 ***``requirements.txt``***
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 
 > Con este comando se instalara todas las librerias necesarias para el proyecto.
 
-* Sexto paso:
+### Sexto paso:
 > Despues procedemos a inicializar el proyecto("Estando Ubicados en la raiz del proyecto"):
 
 ```
