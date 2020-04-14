@@ -29,7 +29,7 @@ python -m venv nombreEntornoVirtual
 ```
 
 ### Cuarto paso:
-> Despues de crear el entorno [virtual](#Tercer), inicializamos el entorno virtual, para esto nos ubicamos
+> Despues de crear el entorno [virtual](###Tercer), inicializamos el entorno virtual, para esto nos ubicamos
 > en la ruta 
 
  ``../nombreEntornoVirtual/Scripts/``
