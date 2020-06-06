@@ -4,7 +4,7 @@ Babel==2.8.0
 certifi==2019.11.28
 chardet==3.0.4
 colorama==0.4.3
-Django==2.0.6
+Django==2.2.13
 django-bootstrap4==0.0.8
 docutils==0.16
 idna==2.8
